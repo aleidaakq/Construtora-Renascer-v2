@@ -1,0 +1,81 @@
+/* =====================================================
+   UTILITIES
+===================================================== */
+
+/* Container */
+
+.container {
+  width: min(92%, var(--container-width));
+
+  margin-inline: auto;
+}
+
+/* Espaçamento das seções */
+
+.section {
+  padding: var(--space-2xl) 0;
+}
+
+/* Cabeçalho das seções */
+
+.section-header {
+  max-width: 760px;
+
+  margin-inline: auto;
+
+  margin-bottom: 4rem;
+
+  text-align: center;
+}
+
+.section-header__tag {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  color: var(--color-primary);
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.section-header__title {
+  margin-bottom: 1.5rem;
+}
+
+.section-header__text {
+  font-size: 1.1rem;
+
+  color: var(--color-text);
+}
+
+/* Alinhamentos */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Fundos */
+
+.bg-light {
+  background: var(--color-surface);
+}
+
+.bg-dark {
+  background: var(--color-title);
+}
+
+.bg-primary {
+  background: var(--color-primary);
+}

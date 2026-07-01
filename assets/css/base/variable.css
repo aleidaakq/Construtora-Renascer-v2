@@ -1,0 +1,87 @@
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+
+:root {
+  /* =====================================
+       CORES
+    ====================================== */
+
+  --color-primary: #b32025;
+  --color-primary-dark: #8f181c;
+
+  --color-accent: #c9a227;
+
+  --color-title: #1e1e1e;
+
+  --color-text: #555555;
+
+  --color-text-light: #7b7b7b;
+
+  --color-background: #ffffff;
+
+  --color-surface: #f8f8f8;
+
+  --color-border: #e6e6e6;
+
+  --color-success: #2e8b57;
+
+  --color-white: #ffffff;
+
+  --color-black: #000000;
+
+  /* =====================================
+       FONTES
+    ====================================== */
+
+  --font-title: "Poppins", sans-serif;
+
+  --font-text: "Inter", sans-serif;
+
+  /* =====================================
+       TAMANHOS
+    ====================================== */
+
+  --container-width: 1200px;
+
+  --header-height: 90px;
+
+  /* =====================================
+   ESPAÇAMENTOS
+===================================== */
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 96px;
+
+  /* =====================================
+       BORDAS
+    ====================================== */
+
+  --radius-sm: 8px;
+
+  --radius-md: 16px;
+
+  --radius-lg: 30px;
+
+  --radius-pill: 999px;
+
+  /* =====================================
+       SOMBRAS
+    ====================================== */
+
+  --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  --shadow-md: 0 18px 40px rgba(0, 0, 0, 0.12);
+
+  --shadow-lg: 0 30px 70px rgba(0, 0, 0, 0.15);
+
+  /* =====================================
+       TRANSIÇÕES
+    ====================================== */
+
+  --transition: all 0.35s ease;
+}

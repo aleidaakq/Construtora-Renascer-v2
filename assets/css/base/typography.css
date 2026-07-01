@@ -1,0 +1,80 @@
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+body{
+
+    font-family:var(--font-text);
+
+    font-size:16px;
+
+    line-height:1.7;
+
+}
+
+/* Títulos */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    color:var(--color-title);
+
+    font-family:var(--font-title);
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+h1{
+
+    font-size:clamp(2.8rem,5vw,4.8rem);
+
+}
+
+h2{
+
+    font-size:clamp(2rem,4vw,3.2rem);
+
+}
+
+h3{
+
+    font-size:1.6rem;
+
+}
+
+h4{
+
+    font-size:1.2rem;
+
+}
+
+/* Parágrafos */
+
+p{
+
+    color:var(--color-text);
+
+    margin-bottom:1rem;
+
+}
+
+/* Destaques */
+
+strong{
+
+    font-weight:700;
+
+}
+
+small{
+
+    font-size:.85rem;
+
+}

@@ -1,0 +1,110 @@
+/* =====================================================
+   RESET CSS
+   Construtora Renascer
+===================================================== */
+
+/* Box sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove margens */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Scroll suave */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body */
+
+body {
+  min-height: 100vh;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+
+  background: var(--color-background);
+
+  color: var(--color-text);
+
+  font-family: var(--font-text);
+}
+
+/* Imagens */
+
+img,
+picture {
+  display: block;
+
+  max-width: 100%;
+}
+
+/* Vídeos */
+
+video {
+  display: block;
+
+  width: 100%;
+}
+
+/* Inputs */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+/* Listas */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Botões */
+
+button {
+  background: none;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+/* Tabelas */
+
+table {
+  border-collapse: collapse;
+
+  border-spacing: 0;
+}
+
+/* Textarea */
+
+textarea {
+  resize: vertical;
+}

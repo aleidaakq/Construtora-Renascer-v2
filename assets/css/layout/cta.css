@@ -1,0 +1,59 @@
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta {
+  padding: 120px 0;
+
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-dark)
+  );
+}
+
+.cta__box {
+  max-width: 900px;
+
+  margin: auto;
+
+  text-align: center;
+
+  color: #fff;
+}
+
+.cta .section-header__tag {
+  color: #ffffff;
+}
+
+.cta h2 {
+  margin: 25px 0;
+
+  color: #fff;
+
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
+}
+
+.cta p {
+  max-width: 700px;
+
+  margin: 0 auto 45px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 1.15rem;
+}
+
+.cta .btn {
+  background: #fff;
+
+  color: var(--color-primary);
+
+  box-shadow: none;
+}
+
+.cta .btn:hover {
+  transform: translateY(-4px);
+
+  background: #f5f5f5;
+}

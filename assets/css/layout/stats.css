@@ -1,0 +1,49 @@
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+  background: var(--color-title);
+
+  color: #fff;
+
+  padding: 90px 0;
+}
+
+.stats__grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 40px;
+
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 3rem;
+
+  font-family: var(--font-title);
+
+  color: var(--color-accent);
+}
+
+.stat span {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 992px) {
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
+}
