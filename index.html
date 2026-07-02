@@ -103,14 +103,9 @@
 
         <!-- Menu Mobile -->
 
-        <button
-    class="header__toggle"
-    type="button"
-    aria-label="Abrir menu">
-
-    <i class="fa-solid fa-bars"></i>
-
-</button>
+        <button class="header__toggle" type="button" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </header>
 
@@ -189,19 +184,22 @@
 
           <div class="hero__stats">
             <article class="hero-stat">
-              <strong>+10</strong>
+              <strong class="counter" data-target="10"> 0 </strong>
 
               <span>Anos de experiência</span>
             </article>
 
             <article class="hero-stat">
-              <strong>+100</strong>
+              <strong class="counter" data-target="100"> 0 </strong>
 
               <span>Obras concluídas</span>
             </article>
 
             <article class="hero-stat">
-              <strong>100%</strong>
+              <strong class="counter" data-target="100" data-suffix="%"
+                >0</strong
+              >
+              <span>%</span>
 
               <span>Compromisso com a qualidade</span>
             </article>
@@ -657,12 +655,8 @@
     <script src="./assets/js/whatsapp.js"></script>
     <script src="./assets/js/animations.js"></script>
     <script src="./assets/js/main.js"></script>
-    <button
-    class="back-to-top"
-    aria-label="Voltar ao topo">
-
-    <i class="fa-solid fa-arrow-up"></i>
-
-</button>
+    <button class="back-to-top" aria-label="Voltar ao topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
   </body>
 </html>

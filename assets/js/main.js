@@ -11,3 +11,10 @@ window.addEventListener("scroll", () => {
     header.classList.remove("header--scrolled");
   }
 });
+/* =====================================================
+   MAIN
+===================================================== */
+
+console.log("Construtora Renascer");
+
+console.log("Website by AS Executive Partners");

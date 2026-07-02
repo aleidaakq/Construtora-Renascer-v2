@@ -1,7 +1,6 @@
 /* =====================================================
    COUNTERS
 ===================================================== */
-
 const counters = document.querySelectorAll(".counter");
 
 const observer = new IntersectionObserver((entries) => {
@@ -9,15 +8,15 @@ const observer = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting) return;
 
     const counter = entry.target;
-
     const target = Number(counter.dataset.target);
+    const suffix = counter.dataset.suffix || "";
 
     let value = 0;
 
     const timer = setInterval(() => {
       value++;
 
-      counter.textContent = value + "+";
+      counter.textContent = value + suffix;
 
       if (value >= target) {
         clearInterval(timer);
