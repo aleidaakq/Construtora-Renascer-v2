@@ -44,6 +44,8 @@
 
   --container-width: 1200px;
 
+  --container-sm: 900px;
+
   --header-height: 90px;
 
   /* =====================================
@@ -56,17 +58,16 @@
   --space-lg: 40px;
   --space-xl: 64px;
   --space-2xl: 96px;
+  --space-3xl: 128px;
 
   /* =====================================
        BORDAS
     ====================================== */
 
   --radius-sm: 8px;
-
   --radius-md: 16px;
-
   --radius-lg: 30px;
-
+  --radius-xl: 40px;
   --radius-pill: 999px;
 
   /* =====================================
@@ -79,9 +80,13 @@
 
   --shadow-lg: 0 30px 70px rgba(0, 0, 0, 0.15);
 
+  --shadow-none: 0 0 0 rgba(0, 0, 0, 0);
+
   /* =====================================
        TRANSIÇÕES
     ====================================== */
 
-  --transition: all 0.35s ease;
+  --transition:
+    color 0.35s ease, background-color 0.35s ease, border-color 0.35s ease,
+    transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
 }
