@@ -1,0 +1,52 @@
+/* =====================================================
+   FORMS
+===================================================== */
+
+.contact__form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contact__form input,
+.contact__form textarea {
+  width: 100%;
+
+  padding: 18px 20px;
+
+  font: inherit;
+
+  border: 1px solid var(--color-border);
+
+  border-radius: var(--radius-md);
+
+  background: var(--color-white);
+
+  color: var(--color-title);
+
+  transition: var(--transition);
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+  color: var(--color-text-light);
+}
+
+.contact__form textarea {
+  min-height: 180px;
+
+  resize: vertical;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 4px rgba(179, 32, 37, 0.12);
+}
+
+.contact__form button {
+  justify-self: start;
+}

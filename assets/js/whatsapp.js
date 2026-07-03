@@ -4,32 +4,41 @@
 
 const form = document.querySelector(".contact__form");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
+if (form) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  const name = form.querySelector('input[type="text"]').value;
+    const whatsappNumber = "5554999999999";
 
-  const email = form.querySelector('input[type="email"]').value;
+    const name = form.querySelector('input[type="text"]').value.trim();
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const phone = form.querySelector('input[type="tel"]').value.trim();
+    const message = form.querySelector("textarea").value.trim();
 
-  const phone = form.querySelector('input[type="tel"]').value;
+    if (!name || !email || !message) {
+      alert("Por favor, preencha os campos obrigatórios.");
 
-  const message = form.querySelector("textarea").value;
+      return;
+    }
 
-  const text = `Olá!
+    const text = `Olá!
 
 Meu nome é ${name}
 
 E-mail: ${email}
 
-Telefone: ${phone}
+Telefone: ${phone || "Não informado"}
 
 Projeto:
 
 ${message}`;
 
-  window.open(
-    `https://wa.me/5554999999999?text=${encodeURIComponent(text)}`,
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
 
-    "_blank",
-  );
-});
+    form.reset();
+  });
+}

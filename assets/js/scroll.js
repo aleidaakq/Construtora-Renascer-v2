@@ -1,30 +1,38 @@
 /* =====================================================
-   HEADER SCROLL
+   SCROLL
+   Header + Back to Top
 ===================================================== */
 
 const header = document.querySelector(".header");
-
-window.addEventListener("scroll", () => {
-  header.classList.toggle(
-    "header--scrolled",
-
-    window.scrollY > 50,
-  );
-});
 const topButton = document.querySelector(".back-to-top");
 
+/* =====================================================
+   SCROLL EVENTS
+===================================================== */
+
 window.addEventListener("scroll", () => {
-  topButton.classList.toggle(
-    "show",
+  const scrollPosition = window.scrollY;
 
-    window.scrollY > 500,
-  );
+  // Header
+  if (header) {
+    header.classList.toggle("header--scrolled", scrollPosition > 50);
+  }
+
+  // Botão voltar ao topo
+  if (topButton) {
+    topButton.classList.toggle("show", scrollPosition > 500);
+  }
 });
 
-topButton.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
+/* =====================================================
+   BACK TO TOP
+===================================================== */
 
-    behavior: "smooth",
+if (topButton) {
+  topButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   });
-});
+}

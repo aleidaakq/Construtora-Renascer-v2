@@ -18,7 +18,6 @@
 
 @import url("./layout/header.css");
 @import url("./layout/hero.css");
-@import url("./layout/sections.css");
 @import url("./layout/footer.css");
 @import url("./layout/about.css");
 @import url("./layout/services.css");
@@ -26,7 +25,6 @@
 @import url("./layout/cta.css");
 @import url("./layout/contact.css");
 @import url("./layout/stats.css");
-@import url("./layout/footer.css");
 
 /* =====================================================
    COMPONENTES

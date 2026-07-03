@@ -22,9 +22,9 @@
 
 html {
   scroll-behavior: smooth;
-}
 
-/* Body */
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   min-height: 100vh;
@@ -42,6 +42,8 @@ body {
   color: var(--color-text);
 
   font-family: var(--font-text);
+
+  line-height: 1.6;
 }
 
 /* Imagens */
@@ -51,6 +53,8 @@ picture {
   display: block;
 
   max-width: 100%;
+
+  height: auto;
 }
 
 /* Vídeos */
@@ -59,6 +63,8 @@ video {
   display: block;
 
   width: 100%;
+
+  height: auto;
 }
 
 /* Inputs */
@@ -107,4 +113,20 @@ table {
 
 textarea {
   resize: vertical;
+}
+
+/* SVG */
+
+svg {
+  display: block;
+
+  max-width: 100%;
+}
+
+/* Seleção de texto */
+
+::selection {
+  background: var(--color-primary);
+
+  color: var(--color-white);
 }

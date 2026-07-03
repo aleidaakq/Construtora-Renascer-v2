@@ -62,7 +62,7 @@
 
     <!-- CSS -->
 
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
 
   <body>
@@ -532,16 +532,15 @@
             <!-- Formulário -->
 
             <form class="contact__form">
-              <input type="text" placeholder="Nome" required />
+              <div class="contact__form-row">
+                <input type="text" placeholder="Nome" required />
 
-              <input type="email" placeholder="E-mail" required />
+                <input type="email" placeholder="E-mail" required />
+              </div>
 
               <input type="tel" placeholder="Telefone" />
 
-              <textarea
-                rows="6"
-                placeholder="Conte-nos sobre seu projeto..."
-              ></textarea>
+              <textarea placeholder="Conte-nos sobre seu projeto..."></textarea>
 
               <button class="btn btn--primary" type="submit">
                 Solicitar orçamento
@@ -561,7 +560,7 @@
 
             <div class="footer__brand">
               <img
-                src="assets/img/logo-renascer.svg"
+                src="assets/img/logo renascer.png"
                 alt="Construtora Renascer"
                 class="footer__logo"
               />

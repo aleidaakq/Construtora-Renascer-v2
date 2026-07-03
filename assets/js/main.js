@@ -1,20 +1,26 @@
 /* =====================================================
+   MAIN
+   Construtora Renascer
+===================================================== */
+
+/* =====================================================
    HEADER SCROLL
 ===================================================== */
 
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("header--scrolled");
-  } else {
-    header.classList.remove("header--scrolled");
-  }
-});
+if (header) {
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("header--scrolled", window.scrollY > 50);
+  });
+}
+
 /* =====================================================
-   MAIN
+   APPLICATION START
 ===================================================== */
 
-console.log("Construtora Renascer");
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("🚧 Construtora Renascer");
 
-console.log("Website by AS Executive Partners");
+  console.log("💼 Website by AS Executive Partners");
+});

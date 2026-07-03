@@ -1,30 +1,36 @@
 /* =====================================================
    COUNTERS
 ===================================================== */
+
 const counters = document.querySelectorAll(".counter");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
+if (counters.length > 0) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
 
-    const counter = entry.target;
-    const target = Number(counter.dataset.target);
-    const suffix = counter.dataset.suffix || "";
+      const counter = entry.target;
+      const target = Number(counter.dataset.target);
+      const suffix = counter.dataset.suffix || "";
 
-    let value = 0;
+      let value = 0;
 
-    const timer = setInterval(() => {
-      value++;
+      const increment = Math.max(1, Math.ceil(target / 100));
 
-      counter.textContent = value + suffix;
+      const timer = setInterval(() => {
+        value += increment;
 
-      if (value >= target) {
-        clearInterval(timer);
-      }
-    }, 40);
+        if (value >= target) {
+          value = target;
+          clearInterval(timer);
+        }
 
-    observer.unobserve(counter);
+        counter.textContent = value + suffix;
+      }, 20);
+
+      observer.unobserve(counter);
+    });
   });
-});
 
-counters.forEach((counter) => observer.observe(counter));
+  counters.forEach((counter) => observer.observe(counter));
+}
