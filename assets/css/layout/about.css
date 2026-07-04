@@ -26,6 +26,10 @@
 
 .about__image {
   position: relative;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
 }
 
 .about__image img {
@@ -44,8 +48,10 @@
   transition: var(--transition);
 }
 
-.about__image:hover img {
-  transform: scale(1.02);
+@media (hover: hover) {
+  .about__image:hover img {
+    transform: scale(1.02);
+  }
 }
 
 /* =====================================
@@ -97,9 +103,9 @@
 .about__card {
   position: absolute;
 
-  right: -30px;
+  right: 20px;
 
-  bottom: 40px;
+  bottom: 30px;
 
   width: 220px;
 
@@ -114,10 +120,14 @@
   text-align: center;
 
   transition: var(--transition);
+
+  z-index: 2;
 }
 
-.about__card:hover {
-  transform: translateY(-6px);
+@media (hover: hover) {
+  .about__card:hover {
+    transform: translateY(-6px);
+  }
 }
 
 .about__card strong {
@@ -161,5 +171,15 @@
     right: 20px;
 
     bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about__card {
+    position: static;
+
+    width: 100%;
+
+    margin-top: var(--space-md);
   }
 }
