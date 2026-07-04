@@ -63,3 +63,9 @@
 
   align-self: start;
 }
+
+@media (max-width: 768px) {
+  .contact__form {
+    padding: var(--space-md);
+  }
+}
