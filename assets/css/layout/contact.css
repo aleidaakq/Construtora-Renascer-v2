@@ -159,3 +159,30 @@
     width: 100%;
   }
 }
+@media (max-width: 992px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__info {
+    order: 1;
+  }
+
+  .contact__form {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact__form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__form {
+    padding: var(--space-md);
+  }
+
+  .contact__form button {
+    width: 100%;
+  }
+}
