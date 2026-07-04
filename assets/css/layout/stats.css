@@ -3,31 +3,47 @@
 ===================================================== */
 
 .stats {
+  padding: var(--space-2xl) 0;
+
   background: var(--color-title);
 
-  color: #fff;
-
-  padding: 90px 0;
+  color: var(--color-white);
 }
+
+/* =====================================
+   Grid
+===================================== */
 
 .stats__grid {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 40px;
+  gap: var(--space-lg);
 
   text-align: center;
+}
+
+/* =====================================
+   Item
+===================================== */
+
+.stat {
+  transition: var(--transition);
+}
+
+.stat:hover {
+  transform: translateY(-5px);
 }
 
 .stat strong {
   display: block;
 
-  margin-bottom: 12px;
-
-  font-size: 3rem;
+  margin-bottom: var(--space-xs);
 
   font-family: var(--font-title);
+
+  font-size: 3rem;
 
   color: var(--color-accent);
 }
@@ -35,6 +51,10 @@
 .stat span {
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* =====================================
+   Responsivo
+===================================== */
 
 @media (max-width: 992px) {
   .stats__grid {

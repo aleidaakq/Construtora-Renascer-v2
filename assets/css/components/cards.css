@@ -2,16 +2,18 @@
    CARDS
 ===================================================== */
 
+/* =====================================
+   Card Base
+===================================== */
+
 .card {
+  overflow: hidden;
+
   background: var(--color-white);
 
   border: 1px solid var(--color-border);
 
   border-radius: var(--radius-lg);
-
-  padding: var(--space-lg);
-
-  overflow: hidden;
 
   box-shadow: var(--shadow-sm);
 
@@ -25,7 +27,7 @@
 }
 
 .card:focus-within {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 /* =====================================
@@ -34,6 +36,8 @@
 
 .service-card {
   position: relative;
+
+  padding: var(--space-lg);
 }
 
 .service-card::before {
@@ -41,7 +45,9 @@
 
   position: absolute;
 
-  inset: 0 auto auto 0;
+  top: 0;
+
+  left: 0;
 
   width: 100%;
 
@@ -56,11 +62,19 @@
   transition: var(--transition);
 }
 
-.service-card:hover::before {
+.service-card:hover,
+.service-card:focus-within {
+  border-color: var(--color-primary);
+}
+
+.service-card:hover::before,
+.service-card:focus-within::before {
   transform: scaleX(1);
 }
 
-/* Ícone */
+/* =====================================
+   Ícone
+===================================== */
 
 .service-card__icon {
   display: flex;
@@ -75,67 +89,123 @@
 
   margin-bottom: var(--space-lg);
 
-  border-radius: 50%;
+  border-radius: var(--radius-md);
 
   background: var(--color-primary-light);
 
-  color: var(--color-primary);
+  transition: var(--transition);
+}
 
+.service-card__icon i {
   font-size: 2rem;
+
+  color: var(--color-primary);
 
   transition: var(--transition);
 }
 
-.service-card:hover .service-card__icon {
+.service-card:hover .service-card__icon,
+.service-card:focus-within .service-card__icon {
   background: var(--color-primary);
-
-  color: var(--color-white);
-
-  transform: rotate(6deg);
 }
 
-/* Conteúdo */
+.service-card:hover .service-card__icon i,
+.service-card:focus-within .service-card__icon i {
+  color: var(--color-white);
 
-.service-card__title {
+  transform: scale(1.1);
+}
+
+/* =====================================
+   Conteúdo
+===================================== */
+
+.service-card h3 {
   margin-bottom: var(--space-sm);
 }
 
-.service-card__text {
+.service-card p {
   margin-bottom: var(--space-lg);
+
+  color: var(--color-text);
 }
 
-/* Arrow */
+/* =====================================
+   Link
+===================================== */
 
-.service-card__arrow {
-  display: flex;
-
-  justify-content: flex-end;
-}
-
-.service-card__arrow i {
-  display: flex;
+.service-card a {
+  display: inline-flex;
 
   align-items: center;
 
-  justify-content: center;
+  gap: var(--space-xs);
 
-  width: 48px;
-
-  height: 48px;
-
-  border-radius: 50%;
-
-  background: var(--color-gray-light);
+  font-weight: 700;
 
   color: var(--color-primary);
 
   transition: var(--transition);
 }
 
-.service-card:hover .service-card__arrow i {
-  background: var(--color-primary);
+.service-card a:hover,
+.service-card a:focus-visible {
+  gap: var(--space-sm);
 
-  color: var(--color-white);
+  outline: none;
+}
 
-  transform: translateX(8px);
+/* =====================================
+   Portfolio Card
+===================================== */
+
+.portfolio-card {
+  padding: 0;
+}
+
+.portfolio-card img {
+  display: block;
+
+  width: 100%;
+
+  height: 300px;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover img,
+.portfolio-card:focus-within img {
+  transform: scale(1.08);
+}
+
+.portfolio-card__content {
+  padding: var(--space-md);
+}
+
+.portfolio-card__category {
+  display: inline-block;
+
+  margin-bottom: var(--space-xs);
+
+  color: var(--color-primary);
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.portfolio-card h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.portfolio-card p {
+  margin: 0;
+
+  color: var(--color-text);
 }
