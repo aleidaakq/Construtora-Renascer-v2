@@ -2,18 +2,20 @@
    WHATSAPP
 ===================================================== */
 
-const form = document.querySelector(".contact__form");
+function initWhatsapp() {
+  const form = document.querySelector(".contact__form");
 
-if (form) {
+  if (!form) return;
+
+  const whatsappNumber = "5554996540938";
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const whatsappNumber = "5554999999999";
-
-    const name = form.querySelector('input[type="text"]').value.trim();
-    const email = form.querySelector('input[type="email"]').value.trim();
-    const phone = form.querySelector('input[type="tel"]').value.trim();
-    const message = form.querySelector("textarea").value.trim();
+    const name = form.elements.name.value.trim();
+    const email = form.elements.email.value.trim();
+    const phone = form.elements.phone.value.trim();
+    const message = form.elements.message.value.trim();
 
     if (!name || !email || !message) {
       alert("Por favor, preencha os campos obrigatórios.");
@@ -29,7 +31,9 @@ E-mail: ${email}
 
 Telefone: ${phone || "Não informado"}
 
-Projeto:
+Gostaria de solicitar um orçamento.
+
+Detalhes do projeto:
 
 ${message}`;
 
@@ -42,3 +46,5 @@ ${message}`;
     form.reset();
   });
 }
+
+document.addEventListener("DOMContentLoaded", initWhatsapp);

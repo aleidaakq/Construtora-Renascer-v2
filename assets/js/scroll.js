@@ -3,36 +3,36 @@
    Header + Back to Top
 ===================================================== */
 
-const header = document.querySelector(".header");
-const topButton = document.querySelector(".back-to-top");
+function initScroll() {
+  const header = document.querySelector(".header");
+  const topButton = document.querySelector(".back-to-top");
 
-/* =====================================================
-   SCROLL EVENTS
-===================================================== */
+  if (!header && !topButton) return;
 
-window.addEventListener("scroll", () => {
-  const scrollPosition = window.scrollY;
+  function updateScroll() {
+    const scrollPosition = window.scrollY;
 
-  // Header
-  if (header) {
-    header.classList.toggle("header--scrolled", scrollPosition > 50);
+    if (header) {
+      header.classList.toggle("header--scrolled", scrollPosition > 50);
+    }
+
+    if (topButton) {
+      topButton.classList.toggle("show", scrollPosition > 500);
+    }
   }
 
-  // Botão voltar ao topo
+  window.addEventListener("scroll", updateScroll);
+
+  updateScroll();
+
   if (topButton) {
-    topButton.classList.toggle("show", scrollPosition > 500);
-  }
-});
-
-/* =====================================================
-   BACK TO TOP
-===================================================== */
-
-if (topButton) {
-  topButton.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+    topButton.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     });
-  });
+  }
 }
+
+document.addEventListener("DOMContentLoaded", initScroll);

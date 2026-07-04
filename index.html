@@ -80,22 +80,23 @@
         <!-- Navegação -->
 
         <nav
-          class="header__nav"
           id="primary-navigation"
+          class="header__nav"
           aria-label="Navegação principal"
+          aria-hidden="true"
         >
-          <ul class="header__menu">
-            <li><a href="#home">Início</a></li>
+  <ul class="header__menu">
+    <li><a href="#home">Início</a></li>
 
-            <li><a href="#empresa">Empresa</a></li>
+    <li><a href="#empresa">Empresa</a></li>
 
-            <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#servicos">Serviços</a></li>
 
-            <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
 
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
 
         <!-- Botão -->
 
@@ -109,7 +110,8 @@
           aria-label="Abrir menu"
           aria-expanded="false"
           aria-controls="primary-navigation"
-        >
+          aria-haspopup="true"
+>
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
       </div>
@@ -578,7 +580,7 @@
 
         <a
           class="btn btn--primary"
-          href="https://wa.me/5554999999999"
+          href="https://wa.me/5554996540938"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -589,65 +591,69 @@
       <!-- Formulário -->
 
       <form class="contact__form">
-        <div class="contact__form-row">
-          <div>
-            <label for="name" class="visually-hidden">
-              Nome
-            </label>
+  <div class="contact__form-row">
+    <div>
+      <label for="name" class="visually-hidden">
+        Nome
+      </label>
 
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Nome"
-              required
-            />
-          </div>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Nome"
+        autocomplete="name"
+        required
+      />
+    </div>
 
-          <div>
-            <label for="email" class="visually-hidden">
-              E-mail
-            </label>
+    <div>
+      <label for="email" class="visually-hidden">
+        E-mail
+      </label>
 
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="E-mail"
-              required
-            />
-          </div>
-        </div>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="E-mail"
+        autocomplete="email"
+        required
+      />
+    </div>
+  </div>
 
-        <div>
-          <label for="phone" class="visually-hidden">
-            Telefone
-          </label>
+  <div>
+    <label for="phone" class="visually-hidden">
+      Telefone
+    </label>
 
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            placeholder="Telefone"
-          />
-        </div>
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      placeholder="Telefone"
+      autocomplete="tel"
+    />
+  </div>
 
-        <div>
-          <label for="message" class="visually-hidden">
-            Conte-nos sobre seu projeto
-          </label>
+  <div>
+    <label for="message" class="visually-hidden">
+      Conte-nos sobre seu projeto
+    </label>
 
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Conte-nos sobre seu projeto..."
-          ></textarea>
-        </div>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Conte-nos sobre seu projeto..."
+      required
+    ></textarea>
+  </div>
 
-        <button class="btn btn--primary" type="submit">
-          Solicitar orçamento
-        </button>
-      </form>
+  <button class="btn btn--primary" type="submit">
+    Solicitar orçamento
+  </button>
+</form>
     </div>
   </div>
 </section>
@@ -772,11 +778,7 @@
 
 <script src="./assets/js/counter.js"></script>
 
-<script src="./assets/js/gallery.js"></script>
-
 <script src="./assets/js/whatsapp.js"></script>
-
-<script src="./assets/js/animations.js"></script>
 
 <script src="./assets/js/main.js"></script>
 

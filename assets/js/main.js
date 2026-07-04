@@ -1,26 +1,16 @@
 /* =====================================================
    MAIN
-   Construtora Renascer
+   KRINDAL
 ===================================================== */
 
 /* =====================================================
-   HEADER SCROLL
+   APPLICATION
 ===================================================== */
 
-const header = document.querySelector(".header");
+function initApp() {
+  console.info("🚀 KRINDAL");
 
-if (header) {
-  window.addEventListener("scroll", () => {
-    header.classList.toggle("header--scrolled", window.scrollY > 50);
-  });
+  console.info("💼 Website by KRINDAL");
 }
 
-/* =====================================================
-   APPLICATION START
-===================================================== */
-
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("🚧 Construtora Renascer");
-
-  console.log("💼 Website by AS Executive Partners");
-});
+document.addEventListener("DOMContentLoaded", initApp);
