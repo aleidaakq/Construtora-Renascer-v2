@@ -84,6 +84,12 @@
    Contato
 ===================================== */
 
+.footer address {
+  margin: 0;
+
+  font-style: normal;
+}
+
 .footer__contact li {
   display: flex;
 
@@ -134,7 +140,9 @@
 
   transform: translateY(-3px);
 
-  outline: none;
+  outline: 2px solid var(--color-accent);
+
+  outline-offset: 3px;
 }
 
 /* =====================================
