@@ -100,7 +100,11 @@
 
         <!-- Botão -->
 
-        <a href="#contato" class="btn btn--primary"> Solicite um orçamento </a>
+      <!-- Botão -->
+
+<a href="#orcamento" class="btn btn--primary">
+  Pedir orçamento
+</a>
 
         <!-- Menu Mobile -->
 
@@ -161,9 +165,9 @@
               </ul>
 
               <div class="hero__buttons">
-                <a href="#contato" class="btn btn--primary">
-                  Solicite um orçamento
-                </a>
+                <a href="#orcamento" class="btn btn--primary">
+  Pedir orçamento
+</a>
 
                 <a href="#portfolio" class="btn btn--secondary"> Ver obras </a>
               </div>
@@ -364,9 +368,9 @@
           qualidade.
         </p>
 
-        <a href="#contato">
-          Solicitar orçamento →
-        </a>
+        <a href="#orcamento">
+  Pedir orçamento →
+</a>
       </article>
 
       <!-- Card 2 -->
@@ -383,9 +387,9 @@
           tipos de imóveis.
         </p>
 
-        <a href="#contato">
-          Solicitar orçamento →
-        </a>
+        <a href="#orcamento">
+  Pedir orçamento →
+</a>
       </article>
 
       <!-- Card 3 -->
@@ -402,9 +406,9 @@
           execução da obra.
         </p>
 
-        <a href="#contato">
-          Solicitar orçamento →
-        </a>
+        <a href="#orcamento">
+  Pedir orçamento →
+</a>
       </article>
     </div>
   </div>
@@ -521,9 +525,9 @@
         Nossa equipe está pronta para transformar sua ideia em realidade.
       </p>
 
-      <a href="#contato" class="btn btn--primary">
-        Solicitar orçamento
-      </a>
+      <a href="#orcamento" class="btn btn--primary">
+  Pedir orçamento
+</a>
     </div>
   </div>
 </section>
@@ -539,7 +543,7 @@
       </span>
 
       <h2 class="section-header__title">
-        Solicite seu orçamento
+        Peça seu orçamento
       </h2>
 
       <p class="section-header__text">
@@ -547,117 +551,98 @@
       </p>
     </div>
 
+     <!-- Formulário -->
+
+ <section id="contato" class="section contact">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-header__tag">
+        CONTATO
+      </span>
+
+      <h2 class="section-header__title">
+        Peça seu orçamento
+      </h2>
+
+      <p class="section-header__text">
+        Preencha os dados abaixo. Você será encaminhado para o WhatsApp com a mensagem pronta para envio.
+      </p>
+    </div>
+
     <div class="contact__grid">
-      <!-- Informações -->
 
-      <div class="contact__info">
-        <article class="contact__card">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+      <form id="orcamento" class="contact__form">
 
-          <div>
-            <h3>Telefone</h3>
-
-            <p>(54) 99999-9999</p>
-          </div>
-        </article>
-
-        <article class="contact__card">
-          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+        <div class="contact__form-row">
 
           <div>
-            <h3>E-mail</h3>
+            <label for="name" class="visually-hidden">
+              Nome
+            </label>
 
-            <p>contato@construtorarenascer.com.br</p>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Nome"
+              autocomplete="name"
+              required
+            />
           </div>
-        </article>
-
-        <article class="contact__card">
-          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
 
           <div>
-            <h3>Endereço</h3>
+            <label for="email" class="visually-hidden">
+              E-mail
+            </label>
 
-            <p>São Francisco de Paula • RS</p>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="E-mail"
+              autocomplete="email"
+              required
+            />
           </div>
-        </article>
 
-        <a
-          class="btn btn--primary"
-          href="https://wa.me/5554996540938"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Falar pelo WhatsApp
-        </a>
-      </div>
+        </div>
 
-      <!-- Formulário -->
+        <div>
+          <label for="phone" class="visually-hidden">
+            Telefone
+          </label>
 
-      <form class="contact__form">
-  <div class="contact__form-row">
-    <div>
-      <label for="name" class="visually-hidden">
-        Nome
-      </label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            placeholder="Telefone"
+            autocomplete="tel"
+          />
+        </div>
 
-      <input
-        id="name"
-        name="name"
-        type="text"
-        placeholder="Nome"
-        autocomplete="name"
-        required
-      />
+        <div>
+          <label for="message" class="visually-hidden">
+            Conte-nos sobre seu projeto
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Conte-nos sobre seu projeto..."
+            required
+          ></textarea>
+        </div>
+
+        <button class="btn btn--primary" type="submit">
+          Pedir orçamento
+        </button>
+
+      </form>
+
     </div>
 
-    <div>
-      <label for="email" class="visually-hidden">
-        E-mail
-      </label>
-
-      <input
-        id="email"
-        name="email"
-        type="email"
-        placeholder="E-mail"
-        autocomplete="email"
-        required
-      />
-    </div>
-  </div>
-
-  <div>
-    <label for="phone" class="visually-hidden">
-      Telefone
-    </label>
-
-    <input
-      id="phone"
-      name="phone"
-      type="tel"
-      placeholder="Telefone"
-      autocomplete="tel"
-    />
-  </div>
-
-  <div>
-    <label for="message" class="visually-hidden">
-      Conte-nos sobre seu projeto
-    </label>
-
-    <textarea
-      id="message"
-      name="message"
-      placeholder="Conte-nos sobre seu projeto..."
-      required
-    ></textarea>
-  </div>
-
-  <button class="btn btn--primary" type="submit">
-    Solicitar orçamento
-  </button>
-</form>
-    </div>
   </div>
 </section>
  <!-- ==================================================
@@ -767,7 +752,7 @@
 
       <p>
         Website desenvolvido por
-        <strong>AS Executive Partners</strong>
+        <strong>KRINDAL</strong>
       </p>
     </div>
   </div>

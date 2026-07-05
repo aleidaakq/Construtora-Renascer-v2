@@ -7,93 +7,37 @@
 }
 
 /* =====================================
-   Grid
+   Layout
 ===================================== */
 
 .contact__grid {
-  display: grid;
+  display: flex;
 
-  grid-template-columns: 380px 1fr;
-
-  align-items: start;
-
-  gap: var(--space-xl);
+  justify-content: center;
 }
 
 /* =====================================
-   Informações
+   Cabeçalho do formulário
 ===================================== */
 
-.contact__info {
-  display: flex;
+.contact__form-header {
+  text-align: center;
 
-  flex-direction: column;
-
-  gap: var(--space-md);
+  margin-bottom: var(--space-md);
 }
 
-.contact__card {
-  display: flex;
-
-  align-items: flex-start;
-
-  gap: var(--space-sm);
-
-  padding: var(--space-md);
-
-  background: var(--color-white);
-
-  border: 1px solid var(--color-border);
-
-  border-radius: var(--radius-lg);
-
-  box-shadow: var(--shadow-sm);
-
-  transition: var(--transition);
-}
-
-.contact__card:hover {
-  transform: translateY(-5px);
-
-  box-shadow: var(--shadow-md);
-}
-
-.contact__card i {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  flex-shrink: 0;
-
-  width: 56px;
-
-  height: 56px;
-
-  border-radius: 50%;
-
-  background: var(--color-primary-light);
-
-  color: var(--color-primary);
-
-  font-size: 1.25rem;
-}
-
-.contact__card h3 {
+.contact__form-header h3 {
   margin-bottom: var(--space-xs);
 }
 
-.contact__card p {
-  margin: 0;
+.contact__form-header p {
+  max-width: 620px;
+
+  margin: 0 auto;
 
   color: var(--color-text);
-}
 
-.contact__info .btn {
-  width: 100%;
-
-  margin-top: var(--space-xs);
+  line-height: 1.7;
 }
 
 /* =====================================
@@ -105,6 +49,10 @@
 
   gap: var(--space-sm);
 
+  width: 100%;
+
+  max-width: 900px;
+
   padding: var(--space-lg);
 
   background: var(--color-white);
@@ -115,71 +63,22 @@
 
   box-shadow: var(--shadow-md);
 }
-.contact__form-row {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: var(--space-sm);
-}
-
-.contact__form input,
-.contact__form textarea {
-  width: 100%;
-
-  padding: 16px;
-
-  border: 1px solid var(--color-border);
-
-  border-radius: var(--radius-md);
-
-  font: inherit;
-}
-
-.contact__form textarea {
-  min-height: 180px;
-
-  resize: vertical;
-}
 
 .contact__form button {
   justify-self: start;
 }
 
-@media (max-width: 768px) {
-  .contact__form-row {
-    grid-template-columns: 1fr;
-  }
+/* =====================================
+   Responsivo
+===================================== */
 
+@media (max-width: 768px) {
   .contact__form {
     padding: var(--space-md);
   }
 
-  .contact__form button {
-    width: 100%;
-  }
-}
-@media (max-width: 992px) {
-  .contact__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact__info {
-    order: 1;
-  }
-
-  .contact__form {
-    order: 2;
-  }
-}
-
-@media (max-width: 768px) {
   .contact__form-row {
     grid-template-columns: 1fr;
-  }
-
-  .contact__form {
-    padding: var(--space-md);
   }
 
   .contact__form button {
