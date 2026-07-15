@@ -1,16 +1,14 @@
 /* =====================================================
    MAIN
-   KRINDAL
-===================================================== */
-
-/* =====================================================
-   APPLICATION
 ===================================================== */
 
 function initApp() {
-  console.info("🚀 KRINDAL");
+  console.info(
+    "%cKRINDAL",
+    "color: #b32025; font-size: 18px; font-weight: 700;",
+  );
 
-  console.info("💼 Website by KRINDAL");
+  console.info("Website desenvolvido por KRINDAL");
 }
 
 document.addEventListener("DOMContentLoaded", initApp);

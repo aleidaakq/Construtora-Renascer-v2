@@ -21,6 +21,8 @@
 
   gap: var(--space-lg);
 
+  align-items: stretch;
+
   text-align: center;
 }
 
@@ -32,8 +34,10 @@
   transition: var(--transition);
 }
 
-.stat:hover {
-  transform: translateY(-5px);
+@media (hover: hover) {
+  .stat:hover {
+    transform: translateY(-5px);
+  }
 }
 
 .stat strong {
@@ -41,15 +45,19 @@
 
   margin-bottom: var(--space-xs);
 
+  color: var(--color-accent);
+
   font-family: var(--font-title);
 
   font-size: 3rem;
 
-  color: var(--color-accent);
+  line-height: 1;
 }
 
 .stat span {
   color: rgba(255, 255, 255, 0.8);
+
+  line-height: 1.6;
 }
 
 /* =====================================

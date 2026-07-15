@@ -3,7 +3,9 @@
    Construtora Renascer
 ===================================================== */
 
-/* Box sizing */
+/* =====================================
+   Box Sizing
+===================================== */
 
 *,
 *::before,
@@ -11,14 +13,19 @@
   box-sizing: border-box;
 }
 
-/* Remove margens */
+/* =====================================
+   Reset Global
+===================================== */
 
 * {
   margin: 0;
+
   padding: 0;
 }
 
-/* Scroll suave */
+/* =====================================
+   Documento
+===================================== */
 
 html {
   scroll-behavior: smooth;
@@ -29,12 +36,6 @@ html {
 body {
   min-height: 100vh;
 
-  text-rendering: optimizeLegibility;
-
-  -webkit-font-smoothing: antialiased;
-
-  -moz-osx-font-smoothing: grayscale;
-
   overflow-x: hidden;
 
   background: var(--color-background);
@@ -44,12 +45,22 @@ body {
   font-family: var(--font-text);
 
   line-height: 1.6;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Imagens */
+/* =====================================
+   Mídia
+===================================== */
 
 img,
-picture {
+picture,
+svg,
+video {
   display: block;
 
   max-width: 100%;
@@ -57,17 +68,9 @@ picture {
   height: auto;
 }
 
-/* Vídeos */
-
-video {
-  display: block;
-
-  width: 100%;
-
-  height: auto;
-}
-
-/* Inputs */
+/* =====================================
+   Formulários
+===================================== */
 
 input,
 button,
@@ -76,32 +79,40 @@ select {
   font: inherit;
 }
 
-/* Links */
-
-a {
-  text-decoration: none;
-
-  color: inherit;
+textarea {
+  resize: vertical;
 }
 
-/* Listas */
+button {
+  border: none;
+
+  background: none;
+
+  cursor: pointer;
+}
+
+/* =====================================
+   Links
+===================================== */
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+/* =====================================
+   Listas
+===================================== */
 
 ul,
 ol {
   list-style: none;
 }
 
-/* Botões */
-
-button {
-  background: none;
-
-  border: none;
-
-  cursor: pointer;
-}
-
-/* Tabelas */
+/* =====================================
+   Tabelas
+===================================== */
 
 table {
   border-collapse: collapse;
@@ -109,21 +120,9 @@ table {
   border-spacing: 0;
 }
 
-/* Textarea */
-
-textarea {
-  resize: vertical;
-}
-
-/* SVG */
-
-svg {
-  display: block;
-
-  max-width: 100%;
-}
-
-/* Seleção de texto */
+/* =====================================
+   Seleção de Texto
+===================================== */
 
 ::selection {
   background: var(--color-primary);

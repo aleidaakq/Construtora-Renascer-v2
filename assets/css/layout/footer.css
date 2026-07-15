@@ -21,6 +21,8 @@
 
   gap: var(--space-lg);
 
+  align-items: start;
+
   margin-bottom: var(--space-xl);
 }
 
@@ -33,6 +35,10 @@
 
   height: 70px;
 
+  width: auto;
+
+  max-width: 100%;
+
   margin-bottom: var(--space-md);
 }
 
@@ -40,6 +46,8 @@
   max-width: 320px;
 
   color: rgba(255, 255, 255, 0.75);
+
+  line-height: 1.7;
 }
 
 /* =====================================
@@ -52,6 +60,8 @@
   color: var(--color-white);
 
   font-size: 1.1rem;
+
+  text-wrap: balance;
 }
 
 /* =====================================
@@ -73,11 +83,13 @@
   transition: var(--transition);
 }
 
-.footer__links a:hover,
-.footer__links a:focus-visible {
-  color: var(--color-white);
+@media (hover: hover) {
+  .footer__links a:hover,
+  .footer__links a:focus-visible {
+    color: var(--color-white);
 
-  outline: none;
+    outline: none;
+  }
 }
 
 /* =====================================
@@ -98,10 +110,14 @@
   gap: var(--space-xs);
 
   color: rgba(255, 255, 255, 0.75);
+
+  line-height: 1.6;
 }
 
 .footer__contact i {
   color: var(--color-accent);
+
+  flex-shrink: 0;
 }
 
 /* =====================================
@@ -134,15 +150,17 @@
   transition: var(--transition);
 }
 
-.footer__social a:hover,
-.footer__social a:focus-visible {
-  background: var(--color-primary);
+@media (hover: hover) {
+  .footer__social a:hover,
+  .footer__social a:focus-visible {
+    background: var(--color-primary);
 
-  transform: translateY(-3px);
+    transform: translateY(-3px);
 
-  outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-accent);
 
-  outline-offset: 3px;
+    outline-offset: 3px;
+  }
 }
 
 /* =====================================

@@ -21,7 +21,9 @@ function initScroll() {
     }
   }
 
-  window.addEventListener("scroll", updateScroll);
+  window.addEventListener("scroll", updateScroll, {
+    passive: true,
+  });
 
   updateScroll();
 

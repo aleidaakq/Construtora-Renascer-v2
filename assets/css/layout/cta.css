@@ -17,19 +17,21 @@
 ===================================== */
 
 .cta__box {
-  transition: var(--transition);
-
   max-width: 900px;
 
-  margin-inline: auto;
+  margin: 0 auto;
 
   text-align: center;
 
   color: var(--color-white);
+
+  transition: var(--transition);
 }
 
-.cta:hover .cta__box {
-  transform: translateY(-3px);
+@media (hover: hover) {
+  .cta:hover .cta__box {
+    transform: translateY(-3px);
+  }
 }
 
 .cta .section-header__tag {
@@ -42,6 +44,10 @@
   color: var(--color-white);
 
   font-size: clamp(2.5rem, 4vw, 3.6rem);
+
+  line-height: 1.2;
+
+  text-wrap: balance;
 }
 
 .cta p {
@@ -49,9 +55,11 @@
 
   margin: 0 auto var(--space-lg);
 
+  color: rgba(255, 255, 255, 0.9);
+
   font-size: 1.15rem;
 
-  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
 }
 
 /* =====================================
@@ -66,8 +74,10 @@
   box-shadow: none;
 }
 
-.cta .btn:hover {
-  background: var(--color-gray-light);
+@media (hover: hover) {
+  .cta .btn:hover {
+    background: var(--color-gray-light);
 
-  transform: translateY(-4px);
+    transform: translateY(-4px);
+  }
 }

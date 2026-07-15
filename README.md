@@ -49,7 +49,6 @@ Construtora-Renascer/
 │   │   ├── main.js
 │   │   ├── header.js
 │   │   ├── menu.js
-│   │   ├── counter.js
 │   │   └── whatsapp.js
 │   │
 │   ├── images/

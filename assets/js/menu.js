@@ -24,11 +24,35 @@ function initMenu() {
 
     menuButton.classList.toggle("is-active", isOpen);
 
-    menuButton.setAttribute("aria-expanded", isOpen);
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+
+    menuButton.setAttribute(
+      "aria-label",
+      isOpen ? "Fechar menu" : "Abrir menu",
+    );
   });
 
   menuLinks.forEach((link) => {
     link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    const clickedInsideMenu = navigation.contains(event.target);
+    const clickedButton = menuButton.contains(event.target);
+
+    if (
+      navigation.classList.contains("header__nav--active") &&
+      !clickedInsideMenu &&
+      !clickedButton
+    ) {
+      closeMenu();
+    }
   });
 
   window.addEventListener("resize", () => {

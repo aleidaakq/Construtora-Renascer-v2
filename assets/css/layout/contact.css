@@ -11,33 +11,9 @@
 ===================================== */
 
 .contact__grid {
-  display: flex;
-
-  justify-content: center;
-}
-
-/* =====================================
-   Cabeçalho do formulário
-===================================== */
-
-.contact__form-header {
-  text-align: center;
-
-  margin-bottom: var(--space-md);
-}
-
-.contact__form-header h3 {
-  margin-bottom: var(--space-xs);
-}
-
-.contact__form-header p {
-  max-width: 620px;
+  max-width: 1000px;
 
   margin: 0 auto;
-
-  color: var(--color-text);
-
-  line-height: 1.7;
 }
 
 /* =====================================
@@ -51,9 +27,9 @@
 
   width: 100%;
 
-  max-width: 900px;
+  max-width: 980px;
 
-  padding: var(--space-lg);
+  padding: var(--space-xl);
 
   background: var(--color-white);
 
@@ -65,7 +41,11 @@
 }
 
 .contact__form button {
-  justify-self: start;
+  display: block;
+
+  width: 320px;
+
+  margin: var(--space-md) auto 0;
 }
 
 /* =====================================
@@ -75,10 +55,6 @@
 @media (max-width: 768px) {
   .contact__form {
     padding: var(--space-md);
-  }
-
-  .contact__form-row {
-    grid-template-columns: 1fr;
   }
 
   .contact__form button {

@@ -2,7 +2,9 @@
    TYPOGRAPHY
 ===================================================== */
 
-/* Títulos */
+/* =====================================
+   Títulos
+===================================== */
 
 h1,
 h2,
@@ -19,6 +21,8 @@ h6 {
   line-height: 1.15;
 
   letter-spacing: -0.02em;
+
+  text-wrap: balance;
 }
 
 h1 {
@@ -45,15 +49,21 @@ h6 {
   font-size: 0.9rem;
 }
 
-/* Parágrafos */
+/* =====================================
+   Parágrafos
+===================================== */
 
 p {
+  margin-bottom: 1rem;
+
   color: var(--color-text);
 
-  margin-bottom: 1rem;
+  line-height: 1.8;
 }
 
-/* Destaques */
+/* =====================================
+   Destaques
+===================================== */
 
 b,
 strong {
@@ -65,9 +75,9 @@ em {
 }
 
 small {
-  font-size: 0.875rem;
-
   color: var(--color-text-light);
+
+  font-size: 0.875rem;
 }
 
 mark {
@@ -76,7 +86,9 @@ mark {
   color: inherit;
 }
 
-/* Linha horizontal */
+/* =====================================
+   Linha Horizontal
+===================================== */
 
 hr {
   border: 0;

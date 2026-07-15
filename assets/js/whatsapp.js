@@ -12,18 +12,20 @@ function initWhatsapp() {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const name = form.elements.name.value.trim();
-    const email = form.elements.email.value.trim();
-    const phone = form.elements.phone.value.trim();
-    const message = form.elements.message.value.trim();
-
-    if (!name || !email || !message) {
-      alert("Por favor, preencha os campos obrigatórios.");
+    if (!form.checkValidity()) {
+      form.reportValidity();
 
       return;
     }
 
-    const text = `Olá!
+    const data = new FormData(form);
+
+    const name = data.get("name").trim();
+    const email = data.get("email").trim();
+    const phone = data.get("phone").trim();
+    const message = data.get("message").trim();
+
+    const whatsappMessage = `Olá!
 
 Meu nome é ${name}
 
@@ -37,11 +39,11 @@ Detalhes do projeto:
 
 ${message}`;
 
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
+    const url =
+      `https://wa.me/${whatsappNumber}?text=` +
+      encodeURIComponent(whatsappMessage);
+
+    window.open(url, "_blank", "noopener,noreferrer");
 
     form.reset();
   });
